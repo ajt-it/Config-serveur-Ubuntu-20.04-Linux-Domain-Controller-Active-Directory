@@ -87,7 +87,7 @@ Enregistrez la règle avec :
 
 
 La règle NAT est maintenant enregistrée de manière temporaire. Rendez-la permanente avec la commande : 
-### ~$ sudo iptables-save> /etc/iptables/rules.v4
+### ~$ sudo iptables-save > /etc/iptables/rules.v4
 
 
 On pourra constater la présence de la règle de NAT avec la commande :
@@ -157,7 +157,7 @@ La commande suivante permet de vérifier le niveau AD DC et le niveau de forêt 
 
 Cependant, avant de pouvoir joindre un PC Windows 10 à votre domaine AD, il faut créer des utilisateurs de l’AD.
 
-Utiliser la commande samba-tool pour administrer « Active Directory » à partir du serveur. Créez l’utilisateur ‘domi’
+Utiliser la commande samba-tool pour administrer « Active Directory » à partir du serveur. Créez l’utilisateur ‘ domi ’
 ### ~$ sudo samba-tool user create domi
 
 
