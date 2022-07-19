@@ -28,7 +28,8 @@ Ubuntu Server utilise « netplan » pour la gestion du réseau.
 Votre configuration réseau ressemblera à ceci :
 
 ### ~$ sudo nano /etc/netplan/00-installer-config.yaml
-![image](https://user-images.githubusercontent.com/46109209/179642042-4b1fab84-3ecc-4f4a-b3ca-0896cd9f6dfe.png)
+
+![r](https://user-images.githubusercontent.com/46109209/179738782-df28e974-1b7f-471b-918d-3a5bce111845.png)
 
 N.B. Ne pas utiliser de tabulations dans « netplan » mais des espaces !
 
@@ -134,7 +135,7 @@ Administrator password: Entrer le mot de passe « administrateur » du « Domain
 Retype password: Confirmer le mot de passe « administrateur » du « Domain Controller »
  
 Du point ‘A à D’, faites « Enter » pour passer au point suivant.
-Optez pour le DNS de Google [8.8.8.8]. En effet, lorsqu'un utilisateur demande un nom de domaine mais que le serveur DNS de l'utilisateur (192.168.250.17 dans notre cas) ne peut pas trouver l'adresse IP correspondante dans son cache DNS ou dans ses zones d'autorité, DNS de Google s'en charge.
+Bien qu’ayant opté pour le DNS du serveur [192.168.250.17], il est conseillé de choisir le DNS de Google [8.8.8.8] car lorsqu'un utilisateur demande un nom de domaine mais que le serveur DNS de l'utilisateur ne peut pas trouver l'adresse IP correspondante dans son cache DNS ou dans ses zones d'autorité, le DNS de Google pourra le résoudre.
 
 ![image](https://user-images.githubusercontent.com/46109209/179644719-2894ace2-4339-44a0-8073-2f5eacd045f7.png)
 
@@ -165,10 +166,18 @@ La commande suivante permet de vérifier le niveau AD DC et le niveau de forêt 
 
 Cependant, avant de pouvoir joindre un PC Windows 10 à votre domaine AD, il faut créer des utilisateurs de l’AD.
 
-Utiliser la commande samba-tool pour administrer « Active Directory » à partir du serveur. Créez l’utilisateur ‘ domi ’
-### ~$ sudo samba-tool user create domi
+Utiliser la commande samba-tool pour administrer « Active Directory » à partir du serveur. Créez l’utilisateur ‘ jadam ’
+
+### ~$ sudo samba-tool user create jadam
+![image](https://user-images.githubusercontent.com/46109209/179756015-d5ee731f-a960-41fa-8a60-6f1030874d34.png)
 
 
 Joignez un ordinateur au domaine et connectez-vous à l'utilisateur du domaine
 
+Configurez comme suit l'interface réseau de votre PC Windows
+![image](https://user-images.githubusercontent.com/46109209/179756143-b2b5c865-5c75-4bf9-a35e-482f2912cc5c.png)
 ![image](https://user-images.githubusercontent.com/46109209/179645537-c5790667-a72b-424d-abea-e6db51772f0e.png)
+![image](https://user-images.githubusercontent.com/46109209/179756451-6351f2a3-c03d-42f9-86ab-86fa3d9314e2.png)
+
+![image](https://user-images.githubusercontent.com/46109209/179756574-3df64aff-9fa1-404f-ac78-c4aafa5e0c61.png)
+![image](https://user-images.githubusercontent.com/46109209/179756601-656464a3-49d3-44c0-a307-44b7d51d506c.png)
