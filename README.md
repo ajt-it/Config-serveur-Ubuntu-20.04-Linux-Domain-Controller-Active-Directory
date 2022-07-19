@@ -102,7 +102,9 @@ Après le redémarrage, installez les packages « SAMBA 4 Active Directory » :
 ### ~$ sudo apt -y install samba krb5-config winbind smbclient
 ---
 Kerberos Realm: it.pro
+
 Kerberos servers for your realm: ad1.it.pro
+
 Administrative server for your Kerberos realm: ad1.it.pro
 
 ![image](https://user-images.githubusercontent.com/46109209/179643938-5b4ea2ae-a351-4d25-ad50-743f97fd1733.png)
@@ -117,12 +119,18 @@ Procédez à l’édition du fichier « smb.conf ». Il est conseillé de faire 
 Lancement du « Domain Controller »
 ### ~$ sudo samba-tool domain provision
 ---
-Realm [IT.PRO]:		A
-Domain [IT]:		B
-Server Role (dc, member, standalone) [dc]:		C
-DNS backend (SAMBA_INTERNAL, BIND9_FLATFILE, BIND9_DLZ, NONE) [SAMBA_INTERNAL]:	D
+Realm [IT.PRO]:                                                                                        "A"
+
+Domain [IT]:		                                                                                         "B"
+
+Server Role (dc, member, standalone) [dc]:		                                                           "C"
+
+DNS backend (SAMBA_INTERNAL, BIND9_FLATFILE, BIND9_DLZ, NONE) [SAMBA_INTERNAL]:	                       "D"
+
 DNS forwarder IP address (write 'none' to disable forwarding)  [127.0.0.53]:	8.8.8.8
+
 Administrator password: Entrer le mot de passe « administrateur » du « Domain Controller »
+
 Retype password: Confirmer le mot de passe « administrateur » du « Domain Controller »
  
 Du point ‘A à D’, faites « Enter » pour passer au point suivant.
