@@ -15,9 +15,9 @@ Le niveau AD DC et le niveau de forêt les plus élevés que Samba4 peut actuell
 
 ## Pré-requis
 
-  * Avoir des bases solide en Linux;
+  * Avoir des bases solides en Linux;
   * Un serveur Ubuntu 20.04;
-  * Disposer des droits 'root';
+  * Disposer des droits 'root'sur le serveur Linux;
   * Un ordinateur Windows 10.
 
 
